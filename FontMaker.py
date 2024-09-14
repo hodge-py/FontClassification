@@ -24,9 +24,10 @@ for y in fonts:
 
             d.text((15,20),x,align='center',anchor="ms", font=font, fill=(0,0,0))
 
-            im.save(f"./fontPics/{y}/{x}+{count}.jpg")
+            im.save(f"./fontPics/{y}/{y+str(count)+x}.jpg")
 
             count += 1
 
         except:
-            print("failed")
+            pass
+            #print("failed")
