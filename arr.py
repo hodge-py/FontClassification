@@ -8,7 +8,8 @@ df = pd.DataFrame()
 fontType = os.listdir("./fontPics")
 
 names = []
-print(os.listdir("./fontPics/"+fontType[0]))
+files = os.listdir("./fontPics/"+fontType[0])
+
 for x in fontType:
     names += [x[:-4]]
 
