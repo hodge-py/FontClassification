@@ -14,6 +14,8 @@ files = os.listdir("./fontPics/"+fontType[0])
 for x in fontType:
     names += [x[:-4]]
 
+names = np.array([names])
+fill = np.array([])
 count = 0
 for x in fontType:
     for y in os.listdir("./fontPics/"+x):
@@ -28,13 +30,16 @@ for x in fontType:
         df = pd.concat([df, pd.DataFrame(arr)])
 
 
+
+
+
     if count == 1:
         break
 
     count += 1
 
 
-
+print(df)
 
 """
 newPic = np.array(df.iloc[1]).reshape(32,32)
