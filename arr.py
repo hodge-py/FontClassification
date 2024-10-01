@@ -29,17 +29,21 @@ for x in fontType:
 
         df = pd.concat([df, pd.DataFrame(arr)])
 
-
-
-
-
-    if count == 1:
+        fill = np.append(fill, x)
+    """
+    if count == 2:
         break
-
+    """
     count += 1
 
+df.reset_index(inplace=True)
 
-print(df)
+testarr = pd.DataFrame(fill,columns=['fonts'])
+
+newTest = pd.concat([testarr,df],axis=1)
+print(newTest)
+
+newTest.to_csv("./fonts_cleaned.csv")
 
 """
 newPic = np.array(df.iloc[1]).reshape(32,32)
